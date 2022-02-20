@@ -8,4 +8,4 @@
 - comparison, evaluation of models, grid search optimization and final results are shown in **Main.ipynb**
 - all needed functions are included in **utils.py**
 - fine-tunned model outperforms baseline model and ***could definitely help in detecting relevant false positives texts***
-- 
+- [**Main.ipynb**] (https://github.com/petervajdecka02947/false_positive_reduction/blob/main/Main.ipynb)

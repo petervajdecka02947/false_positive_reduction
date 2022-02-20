@@ -40,7 +40,13 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 warnings.filterwarnings("ignore")
     
-def get_triple_from_df(df, idx_col ,label_col, text_col, language_col):
+def get_triple_from_df(df, idx_col ,
+                       label_col, text_col, 
+                       language_col):
+    """
+    Function to to create triples from main text column by target label
+    """
+
    
     triplets = []
     idxs = df[idx_col].to_list()
@@ -66,7 +72,10 @@ def get_triple_from_df(df, idx_col ,label_col, text_col, language_col):
 
     return triplets 
 
-def embeddings_sentence_bert(text, IsBase, Bert_name):  
+def embeddings_sentence_bert(text, IsBase, Bert_name):
+    """
+    
+    """
     
         start = time.time()
         if IsBase==True:            
@@ -129,6 +138,9 @@ def plot_confusion_matrix(cm,
     return 
 
 def plot_P_R_curve(prec, rec, auc):
+    """
+    This function plots precision recall curve by having precision recall and auc score as input
+    """
 
     # plot the model precision-recall curve
     plt.figure().set_size_inches(4, 4)
@@ -144,6 +156,9 @@ def plot_P_R_curve(prec, rec, auc):
     return 
 
 def train_evaluate_model(data_path):
+    """
+    Function to split data, train model using grid search and evaluating best model perrformance
+    """
     
     start = time.time()
     result=[]
